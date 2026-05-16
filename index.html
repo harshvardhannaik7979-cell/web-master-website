@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LUXE ESTATE — AI Powered Real Estate Marketplace</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-text">LUXE<span>ESTATE</span></div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Particles -->
+<canvas id="particles"></canvas>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">LUXE<span>ESTATE</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#tour">Virtual Tour</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#marketplace">Marketplace</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn-magnetic nav-cta">Get Started</button>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag reveal">⚡ AI-POWERED REAL ESTATE PLATFORM</div>
+    <h1 class="hero-title">
+      <span class="line"><span>Own The</span></span>
+      <span class="line"><span>Future of</span></span>
+      <span class="line gradient-text"><span>Luxury Living.</span></span>
+    </h1>
+    <p class="hero-sub reveal">Discover premium properties, smart investments, and immersive virtual tours — powered by our AI Broker System.</p>
+    <div class="hero-cta reveal">
+      <button class="btn-primary btn-magnetic">Explore Properties →</button>
+      <button class="btn-ghost btn-magnetic">▶ Watch Virtual Tour</button>
+    </div>
+    <div class="hero-stats reveal">
+      <div><h3 data-count="12500">0</h3><p>Listings</p></div>
+      <div><h3 data-count="98">0</h3><p>Cities</p></div>
+      <div><h3 data-count="45">0</h3><p>Top Agents</p></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- Featured Properties -->
+<section class="section" id="properties">
+  <div class="section-head reveal">
+    <span class="eyebrow">— FEATURED LISTINGS</span>
+    <h2>Luxury <span class="gradient-text">Properties</span></h2>
+    <p>Curated collection of the world's most exclusive estates.</p>
+  </div>
+  <div class="filter-bar reveal">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="villa">Villas</button>
+    <button class="chip" data-filter="penthouse">Penthouses</button>
+    <button class="chip" data-filter="apartment">Apartments</button>
+    <button class="chip" data-filter="island">Private Islands</button>
+  </div>
+  <div class="properties-grid">
+    <article class="property-card reveal" data-cat="villa" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800')">
+        <span class="badge">FEATURED</span>
+        <span class="price">$12.5M</span>
+      </div>
+      <div class="card-body">
+        <h3>Skyline Villa</h3>
+        <p>📍 Beverly Hills, CA</p>
+        <div class="card-meta"><span>🛏 6 Beds</span><span>🛁 8 Baths</span><span>📐 12,000 ft²</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+    <article class="property-card reveal" data-cat="penthouse" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800')">
+        <span class="badge">NEW</span>
+        <span class="price">$8.9M</span>
+      </div>
+      <div class="card-body">
+        <h3>Azure Penthouse</h3>
+        <p>📍 Dubai Marina, UAE</p>
+        <div class="card-meta"><span>🛏 4 Beds</span><span>🛁 5 Baths</span><span>📐 6,500 ft²</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+    <article class="property-card reveal" data-cat="island" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800')">
+        <span class="badge">EXCLUSIVE</span>
+        <span class="price">$45M</span>
+      </div>
+      <div class="card-body">
+        <h3>Coral Private Island</h3>
+        <p>📍 Maldives</p>
+        <div class="card-meta"><span>🛏 12 Beds</span><span>🛁 15 Baths</span><span>📐 50 Acres</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+    <article class="property-card reveal" data-cat="apartment" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800')">
+        <span class="badge">HOT</span>
+        <span class="price">$3.2M</span>
+      </div>
+      <div class="card-body">
+        <h3>Neo Apartment</h3>
+        <p>📍 Manhattan, NY</p>
+        <div class="card-meta"><span>🛏 3 Beds</span><span>🛁 3 Baths</span><span>📐 2,800 ft²</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+    <article class="property-card reveal" data-cat="villa" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800')">
+        <span class="badge">SMART</span>
+        <span class="price">$6.7M</span>
+      </div>
+      <div class="card-body">
+        <h3>Eco Smart Villa</h3>
+        <p>📍 Lake Como, Italy</p>
+        <div class="card-meta"><span>🛏 5 Beds</span><span>🛁 6 Baths</span><span>📐 8,200 ft²</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+    <article class="property-card reveal" data-cat="penthouse" data-tilt>
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800')">
+        <span class="badge">VIP</span>
+        <span class="price">$15M</span>
+      </div>
+      <div class="card-body">
+        <h3>Royal Sky Suite</h3>
+        <p>📍 Singapore</p>
+        <div class="card-meta"><span>🛏 5 Beds</span><span>🛁 6 Baths</span><span>📐 9,000 ft²</span></div>
+        <button class="btn-ghost-sm">View Property →</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Virtual Tour -->
+<section class="section virtual" id="tour">
+  <div class="virtual-wrap">
+    <div class="virtual-text reveal">
+      <span class="eyebrow">— VIRTUAL EXPERIENCE</span>
+      <h2>Step Inside.<br><span class="gradient-text">Virtually.</span></h2>
+      <p>Walk through every room, every angle, every detail. Our immersive 360° virtual tours bring properties to life from anywhere in the world.</p>
+      <ul class="feature-list">
+        <li>✓ 4K Ultra HD 360° Walkthrough</li>
+        <li>✓ Live Agent on Demand</li>
+        <li>✓ AI-Powered Property Insights</li>
+        <li>✓ VR Compatible Experience</li>
+      </ul>
+      <button class="btn-primary btn-magnetic">Launch Virtual Tour</button>
+    </div>
+    <div class="virtual-visual reveal">
+      <div class="vr-frame">
+        <div class="vr-screen" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000')">
+          <div class="vr-pulse"></div>
+          <div class="vr-play">▶</div>
+        </div>
+        <div class="vr-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agents -->
+<section class="section" id="agents">
+  <div class="section-head reveal">
+    <span class="eyebrow">— TRUSTED BROKERS</span>
+    <h2>Meet Our <span class="gradient-text">Elite Agents</span></h2>
+    <p>Industry leaders connecting buyers with billion-dollar dreams.</p>
+  </div>
+  <div class="agents-grid">
+    <div class="agent-card reveal">
+      <div class="agent-img" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400')"></div>
+      <h3>Sophia Carter</h3>
+      <p>Senior Luxury Broker</p>
+      <div class="agent-stats"><span>⭐ 4.9</span><span>$420M Sold</span></div>
+    </div>
+    <div class="agent-card reveal">
+      <div class="agent-img" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400')"></div>
+      <h3>James Mitchell</h3>
+      <p>International Agent</p>
+      <div class="agent-stats"><span>⭐ 5.0</span><span>$680M Sold</span></div>
+    </div>
+    <div class="agent-card reveal">
+      <div class="agent-img" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400')"></div>
+      <h3>Aisha Khan</h3>
+      <p>Investment Specialist</p>
+      <div class="agent-stats"><span>⭐ 4.8</span><span>$310M Sold</span></div>
+    </div>
+    <div class="agent-card reveal">
+      <div class="agent-img" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400')"></div>
+      <h3>Marcus Chen</h3>
+      <p>Smart Property Expert</p>
+      <div class="agent-stats"><span>⭐ 4.9</span><span>$540M Sold</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">— EXPLORE</span>
+    <h2>Property <span class="gradient-text">Categories</span></h2>
+  </div>
+  <div class="cat-grid">
+    <div class="cat reveal"><div class="cat-icon">🏰</div><h4>Mansions</h4><p>2,340 listings</p></div>
+    <div class="cat reveal"><div class="cat-icon">🌆</div><h4>Penthouses</h4><p>1,120 listings</p></div>
+    <div class="cat reveal"><div class="cat-icon">🏝</div><h4>Islands</h4><p>87 listings</p></div>
+    <div class="cat reveal"><div class="cat-icon">🏖</div><h4>Beachfront</h4><p>3,210 listings</p></div>
+    <div class="cat reveal"><div class="cat-icon">⛰</div><h4>Mountain</h4><p>980 listings</p></div>
+    <div class="cat reveal"><div class="cat-icon">🏙</div><h4>Urban Lofts</h4><p>5,450 listings</p></div>
+  </div>
+</section>
+
+<!-- Marketplace -->
+<section class="section marketplace" id="marketplace">
+  <div class="section-head reveal">
+    <span class="eyebrow">— E-COMMERCE</span>
+    <h2>Real Estate <span class="gradient-text">Marketplace</span></h2>
+    <p>Buy, sell, and invest in property directly — like never before.</p>
+  </div>
+  <div class="market-grid">
+    <div class="market-card reveal"><div class="m-num">01</div><h3>Buy Directly</h3><p>Skip middlemen. Purchase verified properties with full ownership transfer in one platform.</p></div>
+    <div class="market-card reveal"><div class="m-num">02</div><h3>List & Sell</h3><p>Reach millions of buyers globally with AI-optimized listings and premium visibility.</p></div>
+    <div class="market-card reveal"><div class="m-num">03</div><h3>Invest Smart</h3><p>Fractional real estate ownership starting from $500. Diversify your portfolio.</p></div>
+    <div class="market-card reveal"><div class="m-num">04</div><h3>AI Broker</h3><p>24/7 AI agent negotiates, recommends, and guides every step of your real estate journey.</p></div>
+  </div>
+</section>
+
+<!-- Why Choose -->
+<section class="section why">
+  <div class="section-head reveal">
+    <span class="eyebrow">— WHY LUXE ESTATE</span>
+    <h2>Built For The <span class="gradient-text">Visionaries</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-icon">🤖</div><h3>AI Property Broker</h3><p>Intelligent recommendations tailored to your lifestyle and budget.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🔒</div><h3>Verified Listings</h3><p>Every property is authenticated, inspected, and blockchain-verified.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🌐</div><h3>Global Reach</h3><p>Access exclusive properties across 98 cities worldwide.</p></div>
+    <div class="why-card reveal"><div class="why-icon">⚡</div><h3>Instant Tours</h3><p>Virtual walkthroughs available 24/7 from any device.</p></div>
+  </div>
+</section>
+
+<!-- Stats Counter -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat reveal"><h2 data-count="25000">0</h2><p>Properties Sold</p></div>
+    <div class="stat reveal"><h2 data-count="98">0</h2><p>Global Cities</p></div>
+    <div class="stat reveal"><h2 data-count="450">0</h2><p>Expert Agents</p></div>
+    <div class="stat reveal"><h2 data-count="99">0</h2><p>Satisfaction %</p></div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">— TESTIMONIALS</span>
+    <h2>What Our <span class="gradient-text">Clients Say</span></h2>
+  </div>
+  <div class="testi-slider reveal">
+    <div class="testi-track" id="testiTrack">
+      <div class="testi"><p>"LUXE ESTATE transformed my property search. The virtual tours saved me dozens of flights — I bought my dream villa from across the world."</p><h4>— Elena Rodriguez</h4><span>CEO, NovaTech</span></div>
+      <div class="testi"><p>"The AI broker recommended properties so precisely it felt psychic. Closed on my Dubai penthouse in two weeks."</p><h4>— David Park</h4><span>Investor</span></div>
+      <div class="testi"><p>"Best real estate platform on the planet. Period. The agents are world-class and the experience is unmatched."</p><h4>— Priya Sharma</h4><span>Art Collector</span></div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">— FAQ</span>
+    <h2>Frequently <span class="gradient-text">Asked</span></h2>
+  </div>
+  <div class="faq">
+    <div class="faq-item reveal"><button class="faq-q">How does the AI Broker work?<span>+</span></button><div class="faq-a"><p>Our AI analyzes thousands of data points — your preferences, market trends, neighborhood data — to suggest perfect matches and negotiate optimal terms.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Are virtual tours really free?<span>+</span></button><div class="faq-a"><p>Yes. Every listing includes a complimentary 4K 360° virtual tour available 24/7 with no booking required.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Can I invest in fractional properties?<span>+</span></button><div class="faq-a"><p>Absolutely. Our marketplace allows fractional ownership starting from $500, secured by blockchain smart contracts.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">How are agents verified?<span>+</span></button><div class="faq-a"><p>Every agent passes a rigorous 7-stage verification, including licensing, past sales audits, and client review scoring.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you operate internationally?<span>+</span></button><div class="faq-a"><p>Yes. We cover 98 major cities across North America, Europe, Middle East, and Asia-Pacific.</p></div></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="contact-wrap">
+    <div class="contact-text reveal">
+      <span class="eyebrow">— GET IN TOUCH</span>
+      <h2>Start Your <span class="gradient-text">Journey</span></h2>
+      <p>Speak with our concierge team or AI broker — available 24/7 across the globe.</p>
+      <ul class="contact-info">
+        <li>📧 hello@luxeestate.com</li>
+        <li>📞 +1 (555) 123-4567</li>
+        <li>📍 5th Avenue, NYC · Marina, Dubai</li>
+      </ul>
+    </div>
+    <form class="contact-form reveal" onsubmit="event.preventDefault();alert('Message sent!');">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Email Address" required/>
+      <input type="text" placeholder="Looking For?"/>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button class="btn-primary btn-magnetic" type="submit">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="logo">LUXE<span>ESTATE</span></div>
+      <p>The future of luxury real estate. Premium properties, intelligent brokers, immersive experiences.</p>
+    </div>
+    <div><h4>Platform</h4><a href="#">Properties</a><a href="#">Marketplace</a><a href="#">Virtual Tours</a><a href="#">AI Broker</a></div>
+    <div><h4>Company</h4><a href="#">About</a><a href="#">Agents</a><a href="#">Careers</a><a href="#">Press</a></div>
+    <div><h4>Connect</h4><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">YouTube</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 LUXE ESTATE · Built for visionaries.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
